@@ -2,7 +2,7 @@
 @import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
 $background-main-menu-color: #333940;
-$background-main-color: #e5e5e5;
+$background-main-color: #f3f3f3;
 $background-comments-color: #f1fff785;
 $main-white-color: #ffffff6e;
 $top-menu-text-color: #18253a61; //объединить
@@ -433,6 +433,7 @@ select {
   box-shadow: 0px 16px 24px rgba(43, 168, 96, 0.18);
   border-radius: 8px;
   padding: 40px 0;
+  margin-bottom: 90px;
 
   .pro-subscription {
     &__header {
@@ -440,7 +441,7 @@ select {
       line-height: 16px;
       text-align: center;
       letter-spacing: 1.5px;
-      color: #2ba860;
+      color: $main-green-color;
     }
 
     &__caption {
@@ -467,21 +468,165 @@ select {
         font-size: 18px;
         line-height: 24px;
         letter-spacing: 0.15px;
-        color: rgba(24, 37, 58, 0.87);
+        color: #18253ade;
       }
 
       &::before {
         content: "";
         position: absolute;
-        background-image: url(../img/pro-sub-icons/Vector.svg);
+        // background-image: url(../img/pro-sub-icons/Vector.svg);
         background-position: center;
         background-repeat: no-repeat;
         display: block;
-        width: 18px;
-        height: 15px;
-        left: -35px;
-        top: 9.17%;
+        width: 32px;
+        height: 32px;
+        left: -50px;
+        top: 0;
+      }
+
+      &:nth-child(1)::before {
+        background-image: url(../img/pro-sub-icons/growth-icon.svg);
+      }
+
+      &:nth-child(2)::before {
+        background-image: url(../img/pro-sub-icons/monitoring-icon.svg);
+      }
+
+      &:nth-child(3)::before {
+        background-image: url(../img/pro-sub-icons/snapshot-icon.svg);
+      }
+
+      &:nth-child(4)::before {
+        background-image: url(../img/pro-sub-icons/dailiy-health-icon.svg);
+      }
+
+      &:nth-child(5)::before {
+        background-image: url(../img/pro-sub-icons/benchmarking-icon.svg);
+      }
+
+      &:nth-child(6)::before {
+        background-image: url(../img/pro-sub-icons/share-circle-icon.svg);
+      }
+
+      &:nth-child(7)::before {
+        background-image: url(../img/pro-sub-icons/professional-icon.svg);
+      }
+      &:nth-child(8)::before {
+        background-image: url(../img/pro-sub-icons/social-icon.svg);
+      }
+      &:nth-child(9)::before {
+        background-image: url(../img/pro-sub-icons/seo-icon.svg);
       }
     }
+    &__paragraph {
+      margin-bottom: 19px;
+    }
+  }
+}
+
+//TESTIMONIAL SECTION
+.testimonial__section {
+  text-align: center;
+  padding-bottom: 40px;
+
+  .testimonial__header {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: $main-green-color;
+    margin-bottom: 40px;
+    display: block;
+    padding: 0 50px;
+  }
+
+  .testimonial__list {
+    &--item {
+      display: flex;
+      justify-content: center;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 21px;
+      text-align: center;
+      color: #58606e76;
+      background-color: #f1fff772;
+      border: 1px solid #89d47f6f;
+      margin-bottom: 20px;
+      padding: 32px 8px 20px 8px;
+
+      &:last-child {
+        margin-bottom: 44px;
+      }
+
+      .testimonial__quote {
+        margin-bottom: 20px;
+      }
+      .testimonial__author--title {
+        display: block;
+        padding-left: 105px;
+        text-align: left;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 40px;
+          height: 40px;
+          background-image: url(../img/katarina-img.png);
+          left: 45px;
+        }
+
+        .testimonial__author--caption {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+          color: #434a54;
+        }
+      }
+    }
+  }
+  .testimonial__section--button {
+    display: block;
+    width: 242px;
+    height: 46.23px;
+    background: $main-green-color;
+    border: none;
+    border-radius: 2px;
+    margin: 0 auto;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #f5f7fa;
+    margin-bottom: 16px;
+    padding: 0;
+
+    & + p {
+      color: #8e99ab;
+      margin: 0;
+    }
+  }
+}
+
+//FEEDBACK SECTION
+.feedback__section {
+  .feedback__article {
+    background: #ffffff;
+    box-shadow: 0px 0px 12px rgba(88, 96, 110, 0.12);
+    border-radius: 4px;
+    padding: 53px 18px 35px 35px;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 27px;
+    color: #58606e;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  .feedback__logo {
+    display: block;
+    margin-bottom: 19px;
   }
 }
