@@ -612,14 +612,15 @@ select {
 .feedback__section {
   .feedback__article {
     background: #ffffff;
-    box-shadow: 0px 0px 12px rgba(88, 96, 110, 0.12);
+    box-shadow: 0px 0px 12px #58606e1f;
     border-radius: 4px;
-    padding: 53px 18px 35px 35px;
     font-style: italic;
     font-weight: normal;
     font-size: 14px;
     line-height: 27px;
     color: #58606e;
+    padding: 53px 0 35px;
+    height: 464px;
 
     &:not(:last-child) {
       margin-bottom: 40px;
@@ -627,6 +628,10 @@ select {
   }
   .feedback__logo {
     display: block;
-    margin-bottom: 19px;
+    margin: 0 auto 19px;
+  }
+  .feedback__text {
+    padding: 0 18px 0 35px;
+    margin: 0;
   }
 }
